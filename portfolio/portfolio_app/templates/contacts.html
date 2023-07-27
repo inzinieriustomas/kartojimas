@@ -1,3 +1,44 @@
-{% extends "base.html" %}
 
-{% block title %} Kontaktai {% endblock %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+<title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+<!--<header>-->
+<!--<h1>{% block header %}Default Header{% endblock %}</h1>-->
+<!--</header>-->
+
+<nav>
+        <a href="{% url 'home' %}">Pradinis</a>
+        <a href="{% url 'project' %}">Projektai</a>
+        <a href="{% url 'contacts' %}">Kontaktai</a>
+</nav>
+
+<main>
+        <fieldset>
+    <label for="fn">Vardas</label>
+    <input name="firstname" type="text" id="fn" /><br><br>
+    <label for="sn">Pavardė</label>
+    <input name="secondname" type="text" id="sn" /><br><br>
+    <label for="el">el.pastas</label>
+    <input name="firstname" type="text" id="el" /><br><br>
+            <label for="UŽSAKYMAS"><br><br>UŽSAKYMAS</label><br><br>
+<textarea name="message" rows="5" cols="20" id="UŽSAKYMAS">`pildomas tekstas`
+</textarea><br><br>
+<button type="button" onclick="alert('pavyko!')">ATSAUKTI!</button>
+<input value="Siųsti" type="submit" />
+</fieldset>
+    </form>
+    <div id = "rezultatas"></div>
+        {% block content %}{% endblock %}
+</main>
+
+<footer>
+<p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+</body>
+</html>

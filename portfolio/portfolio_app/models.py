@@ -9,7 +9,18 @@ class Project(models.Model):
         max_length= 256)
 
     UTL_CHOICES = [
-        ('PT', "Python"),
+        ("Acura", "Acura"),
+        ("Alfa Romeo", "Alfa"),
+        ("Audi", "Audi"),
+        ("Bentley", "Bentley"),
+        ("BMW", "BMW"),
+        ("Buick", "Buick"),
+        ("Cadillac", "Cad"),
+        ("Chevrolet", "Chev"),
+        ("Chrysler", "Chrysler"),
+        ("Citroen", "Citroen"),
+        ("Dacia", "Dacia"),
+        ("Dodge", "Dodge"),
         ('CSS', "CSS"),
         ('JS', "Java Script"),
         ('DK', 'Docker'),
@@ -22,44 +33,45 @@ class Project(models.Model):
         ('WS', "Web Scraping"),
         ('GT', "Git"),
         ('GH', "GitHub")]
-
-    utl = models.CharField(
-        max_length=4,
+    UTL_CHOICES2 = [
+        ("bak","bak")]
+    Gamintojas = models.CharField(
+        max_length=20,
         choices=UTL_CHOICES,
         blank=True)
 
-    utl1 = models.CharField(
-        max_length=4,
+    Marke = models.CharField(
+        max_length=50,
         choices=UTL_CHOICES,
         blank=True)
 
-    utl2 = models.CharField(
-        max_length=4,
+    Variklis = models.CharField(
+        max_length=20,
+        choices=UTL_CHOICES2,
+        blank=True)
+
+    Galia = models.CharField(
+        max_length=20,
         choices=UTL_CHOICES,
         blank=True)
 
-    utl3 = models.CharField(
-        max_length=4,
-        choices=UTL_CHOICES,
-        blank=True)
-
-    utl4 = models.CharField(
-        max_length=4,
+    Spalva = models.CharField(
+        max_length=20,
         choices=UTL_CHOICES,
         blank=True)
 
     utl5 = models.CharField(
-        max_length=4,
+        max_length=20,
         choices=UTL_CHOICES,
         blank=True)
 
     utl6 = models.CharField(
-        max_length=4,
+        max_length=20,
         choices=UTL_CHOICES,
         blank=True)
 
     utl7 = models.CharField(
-        max_length=4,
+        max_length=20,
         choices = UTL_CHOICES,
         blank=True)
 
